@@ -285,21 +285,21 @@ button:hover {
 
 /* Tienda */
 
-.tienda {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+.contenedor-cards-tienda {
+    display: flex;
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.card {
-    display: inline;
+@media (max-width: 768px) {
+    .contenedor-cards-tienda {
+        flex-direction: column;
+    }
 }
 
-.card-2 {
-    grid-row: 2;
-    grid-column: 1;
+.tienda h3 {
+    text-align: center;
+    margin-top: 4rem;
 }
 
 .card-tienda h2 {
@@ -310,9 +310,75 @@ button:hover {
 .card-tienda img {
     width: 100%;
     height: auto;
-    max-height: 18rem;
+    max-height: 20em;
     object-fit: cover;
+}
+
+.card-button {
+    width: 100%;
+}
+
+
+/* Sobre nosotros */
+
+
+.sobre-nosotros-img {
+    position: relative;
+    height: 40rem;
+    width: 100%;
+    margin: 6rem 0;
+}
+
+/* .sobre-nosotros-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--negro);
+    z-index: 0;
+} */
+
+.sobre-nosotros-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/sobre-nosotros.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.sobre-nosotros {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    height: 40rem;
+    gap: 3rem;
+    z-index: 1;
+}
+
+.sobre-nosotros-txt {
+    text-align: center;
+    color: var(--verde-oscuro);
+}
+
+.sobre-nosotros-txt h3 {
+    margin: .7em;
+}
+
+.sobre-nosotros iframe {
+    width: 50rem;
+    height: 30rem;
 }
 
 /* Footer */
