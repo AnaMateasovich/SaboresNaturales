@@ -355,6 +355,13 @@ button:hover {
     z-index: 0;
 }
 
+@media (max-width: 940px) {
+    .sobre-nosotros-img {
+        height: 50rem;
+        width: 100%;
+    }
+}
+
 .sobre-nosotros {
     position: relative;
     background-color: transparent;
@@ -374,6 +381,10 @@ button:hover {
 
 .sobre-nosotros-txt h3 {
     margin: .7em;
+}
+
+.sobre-nosotros-txt p {
+    font-size: 1.6rem;
 }
 
 .sobre-nosotros iframe {
