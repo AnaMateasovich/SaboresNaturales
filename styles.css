@@ -307,6 +307,10 @@ button:hover {
     margin-bottom: 1rem;
 }
 
+.precio-tienda {
+    font-weight: bold;
+}
+
 .card-tienda img {
     width: 100%;
     height: auto;
@@ -319,6 +323,7 @@ button:hover {
 }
 
 
+
 /* Sobre nosotros */
 
 
@@ -327,10 +332,6 @@ button:hover {
     height: 40rem;
     width: 100%;
     margin: 6rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 /* .sobre-nosotros-img::before {
@@ -357,39 +358,21 @@ button:hover {
     background-position: center;
     opacity: 0.3;
     z-index: 0;
+
 }
 
-@media (max-width: 980px) {
-    .sobre-nosotros iframe {
-    width: 30rem;
-    height: 27rem;
-    }
-}
 
 .sobre-nosotros {
     position: relative;
     background-color: transparent;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
+    place-items: center;
     height: 40rem;
     gap: 3rem;
     z-index: 1;
-}
-
-
-@media (max-width: 768px) {
-    .sobre-nosotros{
-        flex-direction: column;
-    }
-    .sobre-nosotros-img {
-        flex-direction: column;
-        height: 60rem;
-    }
-    .sobre-nosotros iframe {
-        width: 50rem;
-    }
 }
 
 .sobre-nosotros-txt {
@@ -398,7 +381,7 @@ button:hover {
 }
 
 .sobre-nosotros-txt h3 {
-    margin: .7em;
+    margin-bottom: 3rem;
 }
 
 .sobre-nosotros-txt p {
@@ -406,8 +389,39 @@ button:hover {
 }
 
 .sobre-nosotros iframe {
-    max-width: 50rem;
-    max-height: 30rem;
+    width: 50rem;
+    height: 30rem;
+}
+
+@media (max-width: 980px) {
+    .sobre-nosotros iframe {
+        width: 30rem;
+    }
+    .sobre-nosotros-txt h3 {
+        margin: 3rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-nosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .sobre-nosotros-img {
+        height: 65rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .sobre-nosotros-img {
+        height: 70rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .sobre-nosotros-img {
+        height: 80rem;
+    }
 }
 
 /* Footer */
