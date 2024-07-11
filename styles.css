@@ -8,6 +8,7 @@
     --verde-claro: #f4f6f2;
     --verde-oscuro: #082d0f;
     --negro: black;
+    --blanco-transparente: rgba(255, 255, 255, .5)
 }
 
 html {
@@ -327,6 +328,7 @@ button:hover {
     height: 40rem;
     width: 100%;
     margin: 6rem 0;
+
 }
 
 /* .sobre-nosotros-img::before {
@@ -357,7 +359,7 @@ button:hover {
 
 @media (max-width: 940px) {
     .sobre-nosotros-img {
-        height: 50rem;
+        height: 70rem;
         width: 100%;
     }
 }
@@ -365,8 +367,8 @@ button:hover {
 .sobre-nosotros {
     position: relative;
     background-color: transparent;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     height: 40rem;
@@ -377,6 +379,8 @@ button:hover {
 .sobre-nosotros-txt {
     text-align: center;
     color: var(--verde-oscuro);
+    background-color: var(--blanco-transparente);
+    border-radius: 2rem;
 }
 
 .sobre-nosotros-txt h3 {
@@ -385,11 +389,14 @@ button:hover {
 
 .sobre-nosotros-txt p {
     font-size: 1.6rem;
+    margin: 2rem;
 }
 
 .sobre-nosotros iframe {
-    width: 50rem;
-    height: 30rem;
+    width: 100%;
+    height: auto;
+    max-height: 20em;
+    object-fit: cover;
 }
 
 /* Footer */
