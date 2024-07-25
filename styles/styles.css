@@ -413,6 +413,9 @@ button:hover {
 }
 
 @media (max-width: 420px) {
+    .titulo {
+        text-align: center;
+    }
     .sobre-nosotros-img {
         height: 70rem;
     }
@@ -455,6 +458,7 @@ button:hover {
     flex-direction: column;
 }
 
+
 .footer-form input {
     padding: .5rem;
 }
@@ -466,8 +470,21 @@ button:hover {
 }
 
 .boton-susc {
+    margin-top: 1rem;
     background-color: var(--verde-claro);
     color: var(--negro);
     padding: .7rem;
+}
+
+.error-email {
+    background-color: rgba(255, 0, 0, .3);
+    color: white;
+    margin-top: 1rem;
+}
+
+.suscripto {
+    background-color: rgb(65, 179, 65);
+    color: black;
+
 }
 
