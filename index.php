@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="build/css/main.css">
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/spinner.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Sedan:wght@100..900&display=swap">
+    <script src="index.js"></script>
     <title>Sabores Naturales</title>
 </head>
 <body>
@@ -14,10 +19,10 @@
         </div>
         <nav class="nav">
             <ul>
-                <li> <a class="nav-link" href="inicio">Inicio</a> </li>
-                <li> <a class="nav-link" href="recetas">Recetas</a> </li>
-                <li> <a class="nav-link" href="comprar">Comprar</a> </li>
-                <li> <a class="nav-link" href="sobre-nosotros">Sobre Nosotros</a> </li>
+                <li> <a class="nav-link" href="#">Inicio</a> </li>
+                <li> <a class="nav-link" href="#recetas">Recetas</a> </li>
+                <li> <a class="nav-link" href="#comprar">Comprar</a> </li>
+                <li> <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a> </li>
             </ul>
         </nav>
     </header>
@@ -39,7 +44,7 @@
     <div class="contenedor-recetas">
         <section class="contenedor contenedor-recetas">
 
-            <h2 class="recetas">Recetas</h2>
+            <h2 id="recetas" class="recetas">Recetas</h2>
     
             <div class="recetas-grid">
     
@@ -76,7 +81,7 @@
         </section>
     </div>
 
-    <section class="contenedor tienda">
+    <section id="comprar" class="contenedor tienda">
 
         <h3> Nuestros Productos</h3>
 
@@ -88,7 +93,8 @@
                 <div>
                     <h2> Pan Integral </h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis numquam voluptate.</p>
-                    <button class="card-button">Añadir al carrito</button>
+                    <p class="precio-tienda">$2800</p>
+                    <button id="añadir-carrito" class="card-button">Añadir al carrito</button>
                 </div>
             </div>
     
@@ -97,7 +103,8 @@
                 <div>
                     <h2> Prepizza Integral </h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis numquam voluptate.</p>
-                    <button class="card-button">Añadir al carrito</button>
+                    <p class="precio-tienda">$1600</p>
+                    <button id="añadir-carrito" class="card-button">Añadir al carrito</button>
                 </div>
             </div>
     
@@ -106,7 +113,7 @@
         
     </section>
 
-    <section class="sobre-nosotros-img">
+    <section id="sobre-nosotros" class="sobre-nosotros-img">
 
         <div class="contenedor sobre-nosotros">
 
@@ -116,7 +123,7 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed dolores, quis voluptatem aut assumenda a, obcaecati officiis ullam eum consequuntur vitae praesentium consequatur cum ratione dicta dolorem quae harum esse.</p>
             </div>
             
-            <div class="sobre-nosotros-ubi">
+            <div id="ubicacion" class="sobre-nosotros-ubi">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.9532233756763!2d-60.63675422344764!3d-32.95224437217303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab1caa93dcf9%3A0x88a5cc1028d5a721!2sCES%2C%20Buenos%20Aires%201174%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1713406123156!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
@@ -130,23 +137,26 @@
             <nav class="footer-izq">
                 <ul>
                     <li> <a href="#">Inicio</a> </li>
-                    <li> <a href="#">Recetas</a> </li>
+                    <li> <a href="#recetas">Recetas</a> </li>
                 </ul>
             </nav>
             <div class="footer-mid">
                 <form class="footer-form" action="">
                     <p class="suscribete-txt"> Subscribete </p>
-                    <input type="text" placeholder="Coloca tu Email">
-                    <button class="boton-susc" type="submit">Enviar</button>
+                    <input id="subscribir" type="text" placeholder="Coloca tu Email">
+                    <button id="suscribete-btn" class="boton-susc" type="submit">Enviar</button>
+                    <div id="spinner" class="loader"></div>
                 </form>
             </div>
             <nav class="footer-der">
                 <ul>
-                    <li> <a href="#">Comprar</a> </li>
-                    <li> <a href="#">Ubicación</a> </li>
+                    <li> <a href="#comprar">Comprar</a> </li>
+                    <li> <a href="#ubicacion">Ubicación</a> </li>
                 </ul>
             </nav>
         </div>
 
     </footer>
 </body>
+
+</html>
