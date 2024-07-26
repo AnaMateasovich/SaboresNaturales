@@ -1,0 +1,36 @@
+@import 'utils/mixins';
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.nav a {
+    color: var(--negro);
+}
+
+.nav ul li{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.nav ul li:hover {
+    font-size: 1.7rem;
+    transition: .3s;
+}
+
+@include mq('tablet') {
+    .nav {
+        padding: 1rem 0;
+    }
+}
+
+@include mq('phone') {
+    .nav ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+        margin-left: 3rem;
+    }
+}

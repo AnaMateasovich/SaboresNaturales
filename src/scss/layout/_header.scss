@@ -1,3 +1,6 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
 .header {
     background-color: $secondary-color;
     display: flex;
@@ -9,7 +12,7 @@
 }
 
 .titulo {
-    font-family: var(--fuente-principal);
+    font-family: $primary-font;
     font-size: 3rem;
     text-transform: uppercase;
     margin: 1rem;
@@ -17,7 +20,7 @@
 }
 
 .sub-titulo {
-    font-family: var(--fuente-principal);
+    font-family: $primary-font;
     font-size: 1.5rem;
     margin-right: 1rem;
 }
@@ -28,27 +31,7 @@
     align-items: center;
 }
 
-.nav {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 2rem;
-}
-
-.nav a {
-    color: var(--negro);
-}
-
-.nav ul li{
-    display: inline-block;
-    margin-right: 1rem;
-}
-
-.nav ul li:hover {
-    font-size: 1.7rem;
-    transition: .3s;
-}
-
-@media (max-width: 880px) {
+@include mq ('tablet') {
     .header {
         height: 12rem;
         flex-direction: column;
@@ -57,7 +40,6 @@
         padding: 1rem 0;
     }
 }
-
 
 @media (max-width: 550px) {
     .header {
