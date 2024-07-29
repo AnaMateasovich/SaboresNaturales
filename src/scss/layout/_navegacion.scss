@@ -3,20 +3,20 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 2rem;
-}
-
-.nav a {
-    color: var(--negro);
-}
-
-.nav ul li{
-    display: inline-block;
-    margin-right: 1rem;
-}
-
-.nav ul li:hover {
-    font-size: 1.7rem;
-    transition: .3s;
+    a {
+        color: var(--negro);
+    }
+    ul li {
+        display: inline-block;
+        margin-right: 1rem;
+        transition: .3s ease;
+    }
+    ul li:hover {
+        background-color: $primary-color;
+        color: $blanco;
+        padding: .3rem;
+        border-radius: 5px;
+    }
 }
 
 @include mq('tablet') {
@@ -24,9 +24,8 @@
         padding: 1rem 0;
     }
 }
-
 @include mq('phone') {
-    .nav ul{
+    .nav ul {
         display: flex;
         flex-direction: column;
         text-align: center;

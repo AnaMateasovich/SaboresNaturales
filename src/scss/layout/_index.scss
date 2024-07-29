@@ -1,0 +1,121 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    background-color: $secondary-color;
+}
+.seccion-blanco {
+    background-color: $blanco;
+}
+.seccion-negro{
+    background-color: $negro;
+}
+.noticias {
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        height: auto;
+        max-height: 40rem;
+        place-items: center;
+        .novedades {
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        h3 {
+            margin: 2rem 0;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 2rem 0;
+        }
+        img {
+            width: 100%;
+            max-height: 30rem;
+            object-fit: cover;
+            margin: 2rem;
+        }
+        
+    }
+
+.recetas {
+    h2 {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    background-color: $blanco;
+    padding-top: 2rem;
+    .recetas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem; 
+    }
+    
+}
+
+.tienda {
+    margin: 2rem 0;
+    h3{
+        text-align: center;
+    }
+    .contenedor-cards-tienda {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+
+        img {
+            height: 40rem;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}
+.sobre-nosotros-img {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../img/sobre-nosotros.webp');
+        background-size: cover;
+        background-position: center;
+        opacity: .3;
+        z-index: 1;
+    }
+}
+.sobre-nosotros {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    place-items: center;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    .sobre-nosotros-ubi {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    h3, p {
+        text-align: center;
+        margin: 2rem;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+

@@ -2,15 +2,13 @@
 @import 'utils/mixins';
 
 .header {
-    background-color: $secondary-color;
+    background-color: $blanco;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: $blanco;
     height: 8rem;
 }
-
 .titulo {
     font-family: $primary-font;
     font-size: 3rem;
@@ -18,20 +16,18 @@
     margin: 1rem;
     margin-left: 3rem;
 }
-
 .sub-titulo {
     font-family: $primary-font;
     font-size: 1.5rem;
     margin-right: 1rem;
 }
-
 .logo {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-@include mq ('tablet') {
+@include mq('tablet') {
     .header {
         height: 12rem;
         flex-direction: column;
@@ -40,7 +36,6 @@
         padding: 1rem 0;
     }
 }
-
 @media (max-width: 550px) {
     .header {
         height: 25rem;
@@ -49,7 +44,7 @@
     .logo {
         flex-direction: column;
     }
-    .nav ul{
+    .nav ul {
         display: flex;
         flex-direction: column;
         text-align: center;

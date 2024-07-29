@@ -1,0 +1,40 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+.footer {
+    a {
+        color: white;
+        display: inline-block;
+        padding: 1rem 0;
+    }
+}
+
+.footer-grid {
+    background-color: $negro;
+    color: $blanco;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 0;
+    text-align: center;
+    place-items: center;
+
+    .footer-mid {
+        p {
+            text-transform: uppercase;
+        }
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        input {
+            box-sizing: border-box;
+            padding: .7rem;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        button {
+            width: 100%;
+            padding: .7rem;
+
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+.leer-mas {
+    display: inline-block;
+    margin: 1rem 0;
+    background-color: $primary-color;
+    color: $blanco;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
