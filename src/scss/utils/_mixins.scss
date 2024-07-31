@@ -24,3 +24,20 @@
         box-shadow: 0 10px 15px rgba(0, 0, 0, .15);
     }
 }
+
+@mixin boton($bg-color, $color) {
+    background-color: $bg-color;
+    border: none;
+    color: $color;
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}

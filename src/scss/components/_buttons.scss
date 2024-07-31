@@ -9,3 +9,8 @@
     padding: 1rem 1.5rem;
     cursor: pointer;
 }
+
+.btn-volver {
+    @include boton($verde-claro, $blanco);
+    margin-bottom: 2rem;
+}

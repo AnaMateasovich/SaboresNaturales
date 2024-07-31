@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="build/css/main.css">
-    <link rel="stylesheet" href="src/css/normalize.css">
-    <link rel="stylesheet" href="src/css/spinner.css">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Sedan:wght@100..900&display=swap">
-    <script src="index.js"></script>
-    <title>Sabores Naturales</title>
-</head>
-<body>
-    <header class="header">
-        <div class="logo">
-            <h2 class="titulo">Sabores Naturales</h2>
-            <h1 class="sub-titulo">Comida Integral</h1>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a class="nav-link" href="#">Inicio</a></li>
-                <li><a class="nav-link" href="#recetas">Recetas</a></li>
-                <li><a class="nav-link" href="#comprar">Comprar</a></li>
-                <li><a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php 
+    require 'includes/funciones.php';
+    incluirTemplate('header');
+ ?>
+
 
     <section class="contenedor">
         <article class="noticias">
@@ -122,33 +99,6 @@
         </div>
     </section>
 
-    
-    <footer class="seccion-negro">
-        <div class="contenedor">
-            <div class="footer footer-grid">
-                <nav class="footer-izq">
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#recetas">Recetas</a></li>
-                    </ul>
-                </nav>
-                <div class="footer-mid">
-                    <form class="footer-form" action="">
-                        <p class="suscribete-txt">Subscribete</p>
-                        <input id="subscribir" type="text" placeholder="Coloca tu Email">
-                        <button id="suscribete-btn" class="boton-susc" type="submit">Enviar</button>
-                        <div id="spinner" class="loader"></div>
-                    </form>
-                </div>
-                <nav class="footer-der">
-                    <ul>
-                        <li><a href="#comprar">Comprar</a></li>
-                        <li><a href="#ubicacion">Ubicación</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
-    
-</body>
-</html>
+<?php
+    incluirTemplate('footer');
+?>

@@ -1,0 +1,36 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+
+.admin-section {
+    h1 {
+        margin: 2rem 0;
+    }
+}
+.nueva-receta {
+    @include boton($verde-claro, $blanco);
+    margin: 2rem 0;
+}
+.crear {
+    h1 {
+        margin: 2rem 0;
+    }
+}
+
+
+.form-crear {
+    margin: 2rem 0;
+    fieldset {
+        padding: 1rem 3rem;
+    }
+    input {
+        padding: .7rem;
+        width: 100%;
+    }
+    div {
+        margin: 2rem 0;
+    }
+    input[type="submit"] {
+        @include boton($verde-claro, $blanco);
+    }
+}
