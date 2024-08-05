@@ -24,12 +24,16 @@
             width: 27rem;
         }
         p{
+            text-align: center;
             margin: 1rem 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 27rem;
         }
         img {
             width: 100%;
-            height: auto;
-            max-height: 35rem;
+            height: 35rem;
             object-fit: cover;
         }
         .card-link {

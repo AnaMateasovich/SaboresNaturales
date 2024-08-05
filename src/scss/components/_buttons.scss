@@ -14,3 +14,15 @@
     @include boton($verde-claro, $blanco);
     margin-bottom: 2rem;
 }
+
+.boton-rojo-block {
+    @include boton($rojo, $blanco);
+    display: block;
+    margin: .5rem 0 0 0;
+    width: 100%;
+}
+.boton-verde-block{
+    @include boton($verde, $blanco);
+    display: block;
+    margin: .5rem 0;
+}

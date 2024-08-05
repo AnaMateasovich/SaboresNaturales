@@ -9,4 +9,40 @@
     &.error {
         background-color: $rojo;
     }
+
+    &.exito {
+        background-color: $verde;
+    }
+}
+
+table.recetas {
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+    text-align: center;
+
+    thead {
+        background-color: $verde-claro;
+
+        th {
+            color: $blanco;
+            padding: 1.5rem;
+        }
+    }
+    tbody{
+        height: auto;
+    }
+    .tr-max-height {
+        height: auto;
+        width: 38rem;
+        max-height: 5rem;
+        overflow: hidden;
+    }
+    .imagen-tabla{
+        width: 10rem;
+    }
+}
+
+.imagen-small {
+    width: 20rem;
 }
