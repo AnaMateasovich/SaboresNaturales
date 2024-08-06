@@ -1,3 +1,12 @@
+<?php 
+    if(!isset($_SESSION)) {
+        session_start();
+    } 
+
+    $auth = $_SESSION['login'] ?? null;
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,6 +32,12 @@
                 <li><a class="nav-link" href="recetas.php">Recetas</a></li>
                 <li><a class="nav-link" href="#comprar">Comprar</a></li>
                 <li><a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <?php if(!$auth): ?>
+                    <li><a class="nav-link" href="login.php">Iniciar Sesión</a></li>
+                <?php endif; ?>
+                <?php if($auth): ?>
+                    <li><a class="nav-link" href="cerrar-sesion.php">Cerrar Sesión</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
         <!-- <?php

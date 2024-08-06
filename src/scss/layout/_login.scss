@@ -1,0 +1,21 @@
+.iniciar-sesion h1 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    label {
+        margin: 1rem 0;
+    }
+    input {
+        padding: .7rem;
+        width: 30%;
+        &:last-child {
+            margin-bottom: 1rem;
+        }
+    }
+    
+}

@@ -9,8 +9,10 @@ $nombre = 'Pepito';
 $email = "correo@correo.com";
 $password = "123456";
 
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
 //Query para crear el usuario 
-$query = "INSERT INTO usuarios (nombre, correo, password) VALUES ('${nombre}','${email}', '${password}')";
+$query = "INSERT INTO usuarios (nombre, correo, password) VALUES ('${nombre}','${email}', '${passwordHash}')";
 
 echo $query;
 
