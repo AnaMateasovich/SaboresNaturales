@@ -1,15 +1,13 @@
 <?php 
 
-require '../../includes/funciones.php';
+require '../../includes/app.php';
 $auth = estaAutenticado();
 
 if(!$auth) {
     header('location: /');
 }
 
-
     //Base de datos
-    require '../../includes/config/database.php';
     $db = conectarDB();
 
     //Consultar para obtener las categorias

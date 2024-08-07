@@ -1,0 +1,16 @@
+{
+    "name": "ana/sabores-naturales",
+    "description": "Creando un proyecto con POO",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./clases"
+        }
+    },
+    "authors": [
+        {
+            "name": "AnaMateasovich",
+            "email": "anamateasovich98@gmail.com"
+        }
+    ],
+    "require": {}
+}

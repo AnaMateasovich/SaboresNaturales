@@ -1,5 +1,5 @@
 <?php
-    @require 'includes/funciones.php';
+    require 'includes/app.php';
     incluirTemplate('header', $recetas = true);
 
     $id = $_GET['id'];
@@ -9,7 +9,6 @@
         header('location: index.php');
     }
 
-    require 'includes/config/database.php';
     $db = conectarDB();
 
     $query = "SELECT * FROM recetas WHERE ID = ${id}";
